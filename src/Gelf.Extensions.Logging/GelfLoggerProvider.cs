@@ -86,7 +86,8 @@ namespace Gelf.Extensions.Logging
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.Error.WriteLine("GELF logger initialization failed. Logging will be degraded. Exception details:");
+                Console.Error.WriteLine(ex.ToString());
             }
         }
 
